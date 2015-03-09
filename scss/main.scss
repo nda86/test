@@ -1,26 +1,2 @@
 @import "compass/reset";
-@import "compass/css3";
-@import "compass/css3/box-shadow";
-
- 
-.box-shadow-example div {
-  width: 400px;
-  height: 400px;
-  background: #ccc;
-  margin: 20px;
-  float: left;
-}
- 
-// Default single box shadow
-#box-shadow-default {
-  @include single-box-shadow;
-}
- 
-// Box shadow with custom settings
-#box-shadow-custom {
-  @include box-shadow(red 20px 20px 10px);
-}
- 
-#box-shadow-custom-multiple {
-  @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
-}
+@import "scaffolding";

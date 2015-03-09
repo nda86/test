@@ -1,0 +1,51 @@
+@import "susy";
+$susy : (
+	columns: 12,
+	gutters: 0.25,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+		debug: (
+			image: show,
+			color: rgba(#53B5BE, 0.5),
+			output: background,
+			toggle: top right,
+		),
+);
+.container{
+	@include container(60em);
+}
+
+.header{
+	@include span(12);
+	background: #F7FF20;
+	height: 300px;
+}
+
+.content{
+	@include span(8);
+	background: #ccc;
+	height: 500px;
+		@media (max-width: 768px){
+			@include span(12);
+		}
+}
+
+.aside{
+	@include span(4 last);
+	background: #1FAF0F;
+	height: 700px;
+		@media (max-width: 768px){
+			@include span(8);
+			margin-left: span(2);
+			height: 300px;
+		}
+}
+
+.footer{
+	@include span(12 last);
+	background: #241010;
+	height: 350px;
+}
+
+
